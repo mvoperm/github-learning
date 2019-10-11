@@ -1,1 +1,5 @@
 /* Главный файл css */
+
+body  {
+  background-color: hsla(210, 95%, 88%, .7);
+}
