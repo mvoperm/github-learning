@@ -1,0 +1,15 @@
+* text=auto
+
+# force text
+*.html text
+*.js text
+*.css text
+*.php text
+*.json text
+*.xml text
+*.xslt text
+
+# binary files
+*.pgn -text
+*.jpg -text
+*.gif -text
