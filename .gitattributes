@@ -13,3 +13,10 @@
 *.pgn -text
 *.jpg -text
 *.gif -text
+
+# diff
+*.html diff=html
+*.css diff=css
+*.php diff=php
+*.xml diff=html
+*.xslt diff=html
