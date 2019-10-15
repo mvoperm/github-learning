@@ -1,0 +1,46 @@
+/*ФАЙЛ УСТАНОВКИ ЛИЧНЫХ ИСХОДНЫХ НАСТРОЕК*/
+
+@charset "utf-8";
+*	{
+	margin: 0px;
+	padding: 0px;
+}
+*:active, *:focus	{
+	outline: none; /* toster.ru/q/206380 */
+}
+body	{
+	font-size: 15px;
+	font-family: Verdana, serif;
+	box-sizing: border-box;
+}
+h1	{
+	font-size: 180%;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-align: center;
+}
+h2	{
+	font-size: 150%;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-align: center;
+}
+h3	{
+	font-size: 130%;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-align: justify;
+}
+h4	{
+	font-size: 120%;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+p, ul, ol, address	{
+	font-size: 100%;
+	text-align: justify;
+}
+ul, ol	{
+	list-style-position: inside;
+}

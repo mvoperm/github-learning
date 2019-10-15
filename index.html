@@ -1,14 +1,90 @@
 <!DOCTYPE html>
-
 <html>
-	<head>
-		<meta charset='utf-8' />
-		<title>Initial html</title>
-		<link rel='stylesheet' href='css/main.css'>
-		<style></style>
-		<script type='module' scr='js/main.js'></script>
-	</head>
-	<body>
-		<h1>Исходный файл index.html</h1>
-	</body>
+<head>
+	<meta charset='utf-8' />
+	<title>Test</title>
+	<link rel='stylesheet' href='/css/styles.css'>
+	<!-- Библиотека Vue.js -->
+	<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+	<!-- Поскольку уже существует обширная экосистема ajax-библиотек и библиотек функций общего назначения, ядро Vue может оставаться маленьким и не изобретать их заново. Кроме того, это позволяет вам использовать только знакомые инструменты. -->
+	<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+	<!-- -->
+	<script src='/js/script.js' type='module'></script>
+</head>
+<body>
+<h2>Тестовая страница</h2>
+<hr><br><br>
+<div id='example-5' style='color: green;'>
+	<button v-on:click='addition'>+1</button>
+	<p>Кнопка выше была нажата <span style='font-weight: bold;'>{{ counter }}</span> раз</p>
+</div>
+<hr>
+<h4>Простой список задач</h4>
+<div id='todo-list-example' style='color: green;'>
+	<form v-on:submit.prevent='addNewTodo'>
+		<label for='new-todo'>Добавить задачу</label>
+		<input
+			size=32
+			v-model='newTodoText'
+			id='new-todo'
+			placeholder='Например, покормить кота'
+			>
+		<button>Добавить</button>
+	</form>
+	<ul>
+		<li
+			is='todo-list-item'
+			v-for='(todo, index) in todos'
+			v-bind:key='todo.id'
+			v-bind:title='todo.title'
+			v-on:remove='todos.splice(index, 1)'
+			></li>
+	</ul>
+</div>
+<hr>
+<ul id='v-for-object' style='list-style-type: none;'>
+	<li v-for='(value, name, index) in object'>
+		{{ index + 1 }}) {{ name }}: {{ value }}
+	</li>
+</ul>
+<hr>
+<ul id='v-for-array'>
+	<li v-for="(item, index) of items">
+		{{ parentMessage }} - {{ index }} - {{ item.message }}
+	</li>
+</ul>
+<hr>
+<div id="watch-example" style='color: green;'>
+	<p>
+		Задайте вопрос, на который можно ответить «да» или «нет»:
+		<input v-model="question">
+	</p>
+	<p style='font-style: italic;'>{{ answer }}</p>
+</div>
+<hr>
+<div id='demo-1'>Создание вычисляемого свойства: {{ fullName }}</div>
+<hr>
+<div id='example-1'>
+	<p>Исходное сообщение: {{ message }}</p>
+	<p>Сообщение задом наперёд как свойство: {{ reversedMessageProperty }}</p>
+	<p>Сообщение задом наперёд как метод: {{ reverseMessageMethod() }}</p>
+</div>
+<hr>
+<div id='app-6' style='color: green;'>
+	<p>{{ message }}</p>
+	<input v-model='message'>
+</div>
+<hr>
+<div id='app-7' style='color: green;' v-bind:title='clue'>
+	<ol>
+		<!-- Теперь мы можем передать каждому компоненту todo-item объект с информацией о задаче, который будет динамически меняться. Мы также определяем для каждого компонента "key", значение которого мы разберём далее в руководстве. -->
+		<todo-item
+			v-for='item in todos'
+			v-bind:todo='item'
+			v-bind:key='item.id'
+			></todo-item><!-- 'item' - это служебное слово, остальные ('id' в т.ч.) - пользовательские -->
+	</ol>
+</div>
+</body>
 </html>

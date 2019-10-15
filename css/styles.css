@@ -1,0 +1,18 @@
+body	{
+	/*background-image: url(/bg-images/im_light_clouds-repeat.jpg);*/
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-color: hsla(210,80%,92%,1);
+	font-size: 18px;
+	font-family: Verdana, serif;
+	box-sizing: border-box;
+}
+hr	{
+	width: 30%;
+	color: hsla(0,0%,85%,1);
+	float: left;
+}
+hr + *	{
+	clear: both;
+}
