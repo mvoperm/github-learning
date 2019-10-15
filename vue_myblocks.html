@@ -7,9 +7,17 @@
 		<!-- Библиотека Vue.js -->
 		<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
 		<!-- Свои скрипты -->
-		<script src='/js/myblocks.js'></script>
+		<script type='module' src='/js/myblocks.js'></script>
 	</head>
 	<body>
 		<h1>Собственные конструкции на Vue.js</h1>
+		<section id='items' v-bind:title='clue'>
+			<h2>Информационные блоки.</h2>
+			<content-item
+				v-for='item in itemblocks'
+				v-bind:itemblock='item'
+				v-bind:key='item.id'
+				></content-item><!-- 'item' - это служебное слово, остальные ('id' в т.ч.) - пользовательские -->
+		</section>
 	</body>
 </html>
