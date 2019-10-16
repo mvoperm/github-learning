@@ -16,3 +16,6 @@ hr	{
 hr + *	{
 	clear: both;
 }
+article	{
+	background-color: hsla(210,80%,88%,1);
+}
