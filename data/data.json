@@ -1,7 +1,7 @@
 {
-	"1" : "basic_hue",
-	"2" : "article_transparency",
-	"3" : "bg_image",
-	"4" : "basic_font_type",
-	"5" : "basic_font_size"
+	"basic_hue": 210,
+	"article_transparency": 75,
+	"bg_image": "0",
+	"basic_font_type": "Verdana",
+	"basic_font_size": 15
 }

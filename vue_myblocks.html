@@ -14,10 +14,10 @@
 		<section id='items' v-bind:title='clue'>
 			<h2>Информационные блоки.</h2>
 			<content-item
-				v-for='item in itemblocks'
+				v-for='item in cssproperties'
 				v-bind:itemblock='item'
 				v-bind:key='item.id'
-				></content-item><!-- 'item' - это служебное слово, остальные ('id' в т.ч.) - пользовательские -->
+				></content-item>
 		</section>
 	</body>
 </html>
